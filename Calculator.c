@@ -10,5 +10,9 @@ int main() {
     printf("The result of the addition of the given two numbers is:\n");
     printf("%.2lf + %.2lf = %.2lf",first_no,second_no,first_no+second_no);
   }
+  else if(op=='-'){
+    printf("The result of the subtraction of the given two numbers is:\n");
+    printf("%.2lf - %.2lf = %.2lf",first_no,second_no,first_no-second_no);
+  }
   return 0;
 }
