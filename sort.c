@@ -72,12 +72,10 @@ int main() {
     j = 0;
     k = start;
     while (i < n1 && j < n2){
-        if (L[i] <= R[j])
-        {
+        if (L[i] <= R[j]){
          a[k++] = L[i++];
         }
-        else
-        {
+        else{
          a[k++] = R[j++];
         }
     }
@@ -92,8 +90,7 @@ int main() {
 }
 void mergesort(int a[], int start, int end)
 {
-    if (start < end)
-    {
+    if (start < end){
         int mid = (start + end) / 2;
         mergesort(a, start, mid);
         mergesort(a, mid + 1, end);
