@@ -1,4 +1,9 @@
 #include <stdio.h>
+void swap(int *a, int *b) {
+  int temp=*a;
+  *a=*b;
+  *b=temp;
+}
 int main() {
   int i,j,n;
   printf("Enter how many numbers are for input: ");
@@ -39,7 +44,23 @@ int main() {
          printf("%d ",arr[i]);
       }
   }
+   void selectionsort(int array[],int size){
+      for (int step = 0; step < size - 1; step++) {
+      int min_idx = step;
+      for (int i = step + 1; i < size; i++) {
+         if (array[i] < array[min_idx]){
+         min_idx = i;
+         }
+      }
+      swap(&array[min_idx], &array[step]);
+      }
+      printf("The elements in sorted order: ");
+         for(i=0;i<n;i++){
+            printf("%d ",arr[i]);
+         }
+      }
   insertionsort(arr,n);
   bubblesort(arr,n);
+  selectionsort(arr,n);
   return 0;
 }
